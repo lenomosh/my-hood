@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+    <h1>Index</h1>
+    <ul>
+    {% for hood in hoods %}
+    <li>{{ hood.name }}</li>
+    {% empty %}
+    <p>No Hood</p>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
