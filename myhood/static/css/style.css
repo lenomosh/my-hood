@@ -1,0 +1,60 @@
+/* Awwwards CSS */
+body{
+    background-color: #fafafa;
+}
+.site-nav{
+    background-color: white;
+
+}
+.site-header{
+ height: 66px;
+}
+.navbar-collapse{
+    height: 66px;
+}
+.navbar-expand-md{
+    background-color: white;
+    padding: 0;
+}
+nav .submit-button a{
+    color: white;
+}
+nav .navbar-nav *{
+    line-height: 66px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-size: .8rem;
+}
+nav .nav-link{
+    padding-bottom: 0;
+    padding-top: 0;
+    color: black;
+}
+nav .submit-button{
+    background-color: #42AB9E;
+    color: white;
+    height: 66px;
+    font-weight: 550;
+}
+.pages-home{
+
+}
+.pages-home .card{
+    padding: 0 10px;
+
+}
+.pages-home .article-img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+    }
+
+.pages-home .project-banner,
+.pages-detail .project-banner{
+    max-height: 400px;
+    height: 400px !important;
+    background-color: white;
+    overflow: hidden;
+}
