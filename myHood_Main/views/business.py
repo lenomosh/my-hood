@@ -6,34 +6,34 @@ from myHood_Main.models import Business
 
 class BusinessListView(ListView):
     model = Business
-    template_name = 'location/index.html'
-    context_object_name = 'locations'
+    template_name = 'business/index.html'
+    context_object_name = 'businesses'
 
 
 class BusinessCreateView(CreateView):
     model = Business
-    template_name = 'location/create.html'
-    fields = ('name',)
-    success_url = reverse_lazy('location.index')
+    template_name = 'business/create.html'
+    fields = ('name','user','hood','email',)
+    success_url = reverse_lazy('business.index')
 
 
 class BusinessDetailView(DetailView):
     model = Business
-    template_name = 'location/read.html'
-    context_object_name = 'location'
+    template_name = 'business/read.html'
+    context_object_name = 'business'
 
 
 class BusinessUpdateView(UpdateView):
     model = Business
-    template_name = 'location/update.html'
-    context_object_name = 'location'
-    fields = ('name',)
+    template_name = 'business/update.html'
+    context_object_name = 'business'
+    fields = ('name','user','hood','email',)
 
     def get_success_url(self):
-        return reverse_lazy('location.read', kwargs={'pk': self.object.id})
+        return reverse_lazy('business.read', kwargs={'pk': self.object.id})
 
 
 class BusinessDeleteView(DeleteView):
     model = Business
-    template_name = 'location/delete.html'
-    success_url = reverse_lazy('location.index')
+    template_name = 'business/delete.html'
+    success_url = reverse_lazy('business.index')

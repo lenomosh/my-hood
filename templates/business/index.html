@@ -3,10 +3,10 @@
 
     <h1>Index</h1>
     <ul>
-    {% for hood in hoods %}
-    <li>{{ hood.name }}</li>
+    {% for business in businesses %}
+    <li>{{ business.name }}</li>
     {% empty %}
-    <p>No Hood</p>
+    <p>No Business</p>
     {% endfor %}
     </ul>
 
