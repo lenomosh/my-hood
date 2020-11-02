@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+
+    <h1>Index</h1>
+    <ul>
+    {% for post in posts %}
+    <li>{{ post.content }}</li>
+    {% empty %}
+    <p>No Post</p>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
