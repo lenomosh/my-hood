@@ -4,3 +4,5 @@ Django @ file:///tmp/build/80754af9/django_1601563330930/work
 psycopg2 @ file:///tmp/build/80754af9/psycopg2_1594305108220/work
 pytz==2020.1
 sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+
+django~=3.1.2

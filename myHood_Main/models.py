@@ -1,6 +1,9 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from user_auth.models import User
+from django_registration.forms import RegistrationForm
+
+
 # from datetime import datetime
 
 
