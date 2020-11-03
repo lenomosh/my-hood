@@ -17,5 +17,7 @@ urlpatterns = [
          ),
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('user_auth.urls')),
+    path('', include('site_pages.urls')),
     path('', include('myHood_Main.urls')),
 ]

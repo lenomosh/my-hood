@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myHood_Main.apps.MyhoodMainConfig',
     'user_auth.apps.AuthConfig',
+    'site_pages.apps.SitePagesConfig',
     'crispy_forms',
 ]
 

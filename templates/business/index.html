@@ -1,13 +1,21 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
+            <div class="h4">Businesses</div>
 
-    <h1>Index</h1>
-    <ul>
+    <div class="row">
     {% for business in businesses %}
-    <li>{{ business.name }}</li>
+        <div class="col-sm-12 m-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="blockquote">{{ business.name}}</div>
+                <p>Email <b>{{ business.email }}</b></p>
+            </div>
+        </div>
+
+        </div>
     {% empty %}
-    <p>No Business</p>
+    <p>No Business in this hood</p>
     {% endfor %}
-    </ul>
+    </div>
 
 {% endblock %}
