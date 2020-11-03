@@ -1,13 +1,21 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
+            <div class="h4">Notification</div>
 
-    <h1>Index</h1>
-    <ul>
-    {% for post in posts %}
-    <li>{{ post.content }}</li>
+    <div class="row">
+    {% for notification in notifications %}
+        <div class="col-sm-12 m-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="blockquote">{{ notification.content}}</div>
+                <div class="blockquote-footer">{{ notification.UPDATED_AT|date }}</div>
+            </div>
+        </div>
+
+        </div>
     {% empty %}
-    <p>No Post</p>
+    <p>No Notifications in this hood</p>
     {% endfor %}
-    </ul>
+    </div>
 
 {% endblock %}

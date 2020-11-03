@@ -29,6 +29,7 @@
               <div class="navbar-nav">
                 {% if user.is_authenticated %}
                     <a class="nav-item nav-link" href="{% url 'post.index' %}">Posts</a>
+                    <a class="nav-item nav-link" href="{% url 'notification.index' %}">Notification</a>
                     <a class="nav-item nav-link" href="{% url 'business.index' %}">Businesses</a>
                     <a class="nav-item nav-link" href="{% url 'user.profile' %}">Profile</a>
                     <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
