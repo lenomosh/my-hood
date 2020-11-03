@@ -1,13 +1,27 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
-
-    <h1>Index</h1>
-    <ul>
+    <div class="card">
+    <div class="card-body">
+            <a class="btn btn-success" href="{% url 'post.create' %}">New Post</a>
+    </div>
+    </div>
+    <div class="row">
+        <div class="h4">Posts</div>
     {% for post in posts %}
-    <li>{{ post.content }}</li>
+        <div class="col-sm-12 m-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="blockquote">{{ post.content }}</div>
+            </div>
+            <div class="card-footer">
+                by {{ post.author.username }}
+            </div>
+        </div>
+
+        </div>
     {% empty %}
     <p>No Post</p>
     {% endfor %}
-    </ul>
+    </div>
 
 {% endblock %}
