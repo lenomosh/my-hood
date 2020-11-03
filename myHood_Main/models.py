@@ -1,6 +1,9 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from user_auth.models import User
+from django_registration.forms import RegistrationForm
+
+
 # from datetime import datetime
 
 
@@ -43,9 +46,15 @@ class Post(models.Model):
     CREATED_AT = models.DateTimeField(auto_now_add=True)
     UPDATED_AT = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f"{self.hood.name} post #{self.id}"
+
 
 class Notification(models.Model):
-    content = models.TextField
+    content = models.TextField()
     hood = models.ForeignKey(Hood, on_delete=models.CASCADE, related_name='notifications')
     CREATED_AT = models.DateTimeField(auto_now_add=True)
     UPDATED_AT = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Notification {self.hood.name} #{self.id}"
