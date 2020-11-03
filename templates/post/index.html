@@ -14,7 +14,7 @@
                 <div class="blockquote">{{ post.content }}</div>
             </div>
             <div class="card-footer">
-                by {{ post.author.username }}
+                by {{ post.author.username }} on {{ post.CREATED_AT|date }}
             </div>
         </div>
 
